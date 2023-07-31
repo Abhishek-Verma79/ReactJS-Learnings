@@ -37,6 +37,7 @@ function Form() {
     setDescription("");
     setQuantity(1);
   }
+  
 
   return (
     <form className="add-form" onSubmit={handleSubmit}>
