@@ -64,7 +64,7 @@ function Steps() {
 
           <div className="buttons">
             <Button bgColor="#7950f2" textColor="#fff" onClick={handlePrevious}>
-              <span>👈</span>Previous{" "}
+               <span>👈</span>Previous{" "}
             </Button>
             <Button bgColor="#7950f2" textColor="#fff" onClick={handleNext}>
               Next <span>👉</span>{" "}
