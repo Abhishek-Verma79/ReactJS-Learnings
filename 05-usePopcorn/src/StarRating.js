@@ -21,6 +21,7 @@ StarRating.propTypes = {
   onSetRating: PropTypes.func,
 }
 
+
 export default function StarRating({
   maxRating = 5,
   color = "#fcc419",
