@@ -24,7 +24,7 @@ export default function App() {
       <Tabbed content={content} />
     </div>
   );
-}
+} 
 
 // console.log(<DifferentContent test={23} />)
 
