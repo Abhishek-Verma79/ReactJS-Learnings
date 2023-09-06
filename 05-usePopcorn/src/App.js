@@ -139,7 +139,7 @@ export default function App() {
           )}
           {error && <ErrorMessage message={error} />}
         </Box>
-        <Box>
+        <Box> 
           {selectedId ? (
             <MovieDetails
               key={selectedId}
