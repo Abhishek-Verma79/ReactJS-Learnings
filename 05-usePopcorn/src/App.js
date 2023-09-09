@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import StarRating from "./StarRating";
 
-
 const KEY = "338d4d2f";
 
 export default function App() {
@@ -93,7 +92,7 @@ export default function App() {
           )}
           {error && <ErrorMessage message={error} />}
         </Box>
-        <Box> 
+        <Box>
           {selectedId ? (
             <MovieDetails
               key={selectedId}
@@ -247,9 +246,20 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
     Genre: genre,
   } = movie;
 
-    
-    // if(imdbRating > 8) [isTop, setIsTop] = useState(true);
-    // if(imdbRaing > 8) return <p>Greatest ever!</p>;
+  // if(imdbRating > 8) [isTop, setIsTop] = useState(true);
+  // if(imdbRaing > 8) return <p>Greatest ever!</p>;
+
+  //  const [isTop, setIsTop] = useState(imdbRating > 8);
+  //  console.log(isTop);
+
+  //  useEffect(function(){
+  //   setIsTop(imdbRating > 8);
+  //  },[imdbRating]);
+
+  //  const isTop = imdbRating > 8;
+  //  console.log(isTop);
+
+  // const [avgRating, setAvgRating] = useState(0);
 
   function handleAdd() {
     const newWatchedMovie = {
@@ -263,6 +273,8 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
     };
     onAddWatched(newWatchedMovie);
     onCloseMovie();
+    // setAvgRating(Number(imdbRating));
+    // setAvgRating((avgRating) => (avgRating + userRating) / 2);
   }
 
   useEffect(
@@ -338,6 +350,7 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
               </p>
             </div>
           </header>
+          {/* <p>{avgRating}</p> */}
 
           <section>
             <div className="rating">
