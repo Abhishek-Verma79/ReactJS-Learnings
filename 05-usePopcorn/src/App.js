@@ -165,6 +165,7 @@ function NumResults({ movies }) {
 }
 
 function Search({ query, setQuery }) {
+  
   const inputEl = useRef(null);
 
   useEffect(
