@@ -18,7 +18,7 @@ export function useMovies(query) {
           //erase all the prev error before searching for a new movie
           setError("");
           const res = await fetch(
-            `http://www.omdbapi.com/?apikey=${KEY}&s=${query}`,
+            `https://www.omdbapi.com/?apikey=${KEY}&s=${query}`,
             { signal: controller.signal }
           );
 
