@@ -3,8 +3,10 @@ import SearchOrder from "../features/order/SearchOrder.jsx";
 import Username from "../features/user/Username.jsx";
 function Header() {
   return (
-    <header className="bg-yellow-500 uppercase tracking-widest " >
-      <Link to="/">Fast React Pizza Co.</Link>
+    <header className="border-b border-stone-200 bg-yellow-400 px-4 py-3 uppercase sm:px-6 flex items-center justify-between ">
+      <Link to="/" className="tracking-widest">
+        Fast React Pizza Co.
+      </Link>
       <SearchOrder />
       <Username />
     </header>
