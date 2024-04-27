@@ -3,10 +3,9 @@ import Button from "../../ui/Button.jsx";
 import { formatCurrency } from "../../utils/helpers";
 import { addItem, getCurrentQuantityById } from "../cart/cartSlice.js";
 import DeleteItem from "../cart/DeleteItem.jsx";
-
+import UpdateItemQuantity from "../cart/UpdateItemQuantity.jsx";
 
 function MenuItem({ pizza }) {
-
   const dispatch = useDispatch();
   const { id, name, unitPrice, ingredients, soldOut, imageUrl } = pizza;
   const currQuantity = useSelector(getCurrentQuantityById(id));
@@ -16,7 +15,7 @@ function MenuItem({ pizza }) {
     const newItem = {
       pizzaId: id,
       name,
-      quantity:1,
+      quantity: 1,
       unitPrice,
       totalPrice: unitPrice * 1,
     };
@@ -43,7 +42,12 @@ function MenuItem({ pizza }) {
               Sold out
             </p>
           )}
-          {isInCart && <DeleteItem pizzaId={id} />}
+          {isInCart && (
+            <div className="flex items-center gap-3 sm:gap-8" >
+              <UpdateItemQuantity pizzaId={id} currQuantity={currQuantity} />
+              <DeleteItem pizzaId={id} />
+            </div>
+          )}
           {!soldOut && !isInCart && (
             <Button type="small" onClick={handleAddToCart}>
               Add to cart

@@ -59,6 +59,30 @@
         "lat": "41.91045347666421",
         "lng": "-4.504394531250001"
       }
+    },
+    {
+      "id": "5d1a",
+      "cityName": "Comun de Sepulveda y Riaza",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-04-24T07:27:13.131Z",
+      "notes": "dfdf",
+      "position": {
+        "lat": "41.269549502842594",
+        "lng": "-3.5485839843750004"
+      }
+    },
+    {
+      "id": "a4a8",
+      "cityName": "Rillo",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-04-24T07:29:03.228Z",
+      "notes": "dsasd",
+      "position": {
+        "lat": "40.713955826286046",
+        "lng": "-0.9777832031250001"
+      }
     }
   ]
 }
